@@ -1,4 +1,4 @@
-package examplefuncsplayer;
+package honeybunnies;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
