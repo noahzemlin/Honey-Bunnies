@@ -1,4 +1,4 @@
-package honeybunnies;
+package honeybunnies_v1;
 
 import battlecode.common.*;
 
@@ -122,18 +122,7 @@ public class PathPlanner {
     }
 
     public static boolean canMove(RobotController rc, Direction direction) {
-
-        try {
-            boolean isOurSquare = rc.senseMapInfo(rc.getLocation().add(direction)).getPaint().isAlly();
-            boolean canAttackSquare = (rc.getType() == UnitType.SOLDIER && rc.canAttack(rc.getLocation().add(direction)));
-            if (isOurSquare || canAttackSquare) {
-                return rc.canMove(direction);
-            } else {
-                return false;
-            }
-        } catch (GameActionException e) {
-            return false;
-        }
+        return rc.canMove(direction);
     }
 
     /**
